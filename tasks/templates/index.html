@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="/add/">Create task</a>
+{% for task in all_tasks %}
+    <p>{{ task.title }} - {{ task.date_time }}{{task.text}}</p>
+    <a href="/update/">Update task</a>
+    <a href="/delete/">Delete task</a>
+{% endfor %}
+</body>
+</html>
