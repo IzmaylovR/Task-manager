@@ -11,10 +11,21 @@ def new_task(request):
     if request.method == 'POST':
         form = TaskForm(request.POST)
         if form.is_valid():
-
+            form.save()
             return HttpResponseRedirect('/')
-
     else:
         form = TaskForm()
-
     return render(request, 'create_task.html', {'form': form})
+
+def update_task(request,id):
+    task = Tasks.objects.get(pk=id)
+    if request.method == 'POST':
+        task
+
+
+
+
+def delete_task(request,id):
+    task = Tasks.objects.get(pk=id)
+    task.delete()
+    return HttpResponseRedirect('/')

@@ -19,6 +19,6 @@ from tasks import views
 
 urlpatterns = [
     url(r'^$', views.index),
-    url(r'^add/', views.new_task),
+    url(r'^task/', include('tasks.urls')),
     url(r'^admin/', include(admin.site.urls)),
 ]
