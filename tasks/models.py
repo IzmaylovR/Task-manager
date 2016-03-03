@@ -7,4 +7,4 @@ class Tasks(models.Model):
     title = models.CharField(max_length=50)
     date_time = models.DateTimeField('date published')
     text = models.TextField(max_length=500)
-
+    is_readed = models.BooleanField(default=False)
