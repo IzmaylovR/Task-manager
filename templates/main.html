@@ -5,6 +5,22 @@
     <title>Oh my...</title>
 </head>
 <body>
+<div>
+    <section>
 
+        {% if username %}
+            <a href="/accounts/logout">Logout {{ username }}</a>
+        {% else %}
+            <a href="/accounts/login">Login</a>
+        {% endif %}
+
+    </section>
+</div>
+
+{% block login %}
+{% endblock %}
+
+{% block body %}
+{% endblock %}
 </body>
 </html>

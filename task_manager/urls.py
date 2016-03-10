@@ -20,5 +20,6 @@ from tasks import views
 urlpatterns = [
     url(r'^$', views.index),
     url(r'^task/', include('tasks.urls')),
+    url(r'^accounts/', include('userlogin.urls')),
     url(r'^admin/', include(admin.site.urls)),
 ]

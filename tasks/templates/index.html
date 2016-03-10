@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends 'main.html' %}
+
+{% block body %}
+
 <a href="/task/add/">Create task</a>
 {% for task in all_tasks %}
     <h3>{{ task.title }}</h3><a>{{ task.date_time }}</a> - <a>{{task.text}}</a> - <a>{{ task.is_readed }}</a>
     <a href="/task/update/{{task.id}}/">Update task</a>
     <a href="/task/delete/{{task.id}}/">Delete task</a>
 {% endfor %}
-</body>
-</html>
+
+{% endblock %}
+
+{% block login %}
+{% endblock %}
